@@ -21,6 +21,8 @@ public class TodoService {
         List<TodoEntity> todoEntities = todoRepository.findAllByCompleted(true);
 
         List<TodoDto> todoDtos = TodoMapper.mapEntityListToDoList(todoEntities);
+
+        return todoDtos;
     }
 
 
@@ -29,6 +31,8 @@ public class TodoService {
         List<TodoEntity> todoEntities = todoRepository.findAllByCompleted(false);
 
         List<TodoDto> todoDtos = TodoMapper.mapEntityListToDoList(todoEntities);
+
+        return todoDtos;
     }
 
     public boolean create(CreateTodoDto todo){

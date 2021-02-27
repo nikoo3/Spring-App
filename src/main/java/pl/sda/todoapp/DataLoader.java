@@ -21,12 +21,12 @@ public class DataLoader implements ApplicationRunner{
 
         if (!todoRepository.findAll().iterator().hasNext()) {
             for (int i = 0; i <10 ; i++) {
-                TodoEntity entity = new TodoEntity("Zadanie zakończone nr " + (i+1));
+                TodoEntity entity = new TodoEntity("Zadanie zakończone nr " + (i + 1));
                 entity.setCompleted(true);
 
                 todoRepository.save(entity);
 
-                entity = new TodoEntity("Zadanie niezakończonme nr " + (i+1));
+                entity = new TodoEntity("Zadanie niezakończonme nr " + (i + 1));
                 todoRepository.save(entity);
             }
         }

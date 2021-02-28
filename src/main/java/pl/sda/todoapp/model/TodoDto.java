@@ -1,9 +1,14 @@
 package pl.sda.todoapp.model;
 
+import javax.validation.constraints.*;
+
 public class TodoDto {
 
     private Long id;
 
+    @NotNull
+    @NotEmpty
+    @Size(min = 4, max = 255)
     private String text;
 
     private String createDate;

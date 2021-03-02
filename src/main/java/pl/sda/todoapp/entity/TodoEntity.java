@@ -1,7 +1,5 @@
 package pl.sda.todoapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonTypeId;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -24,6 +22,10 @@ public class TodoEntity {
     @Temporal(TemporalType.DATE)
     @Column(nullable = true)
     private Date completedDate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 
     public TodoEntity() {
     }

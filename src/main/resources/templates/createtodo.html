@@ -36,7 +36,7 @@
 
             <form role="form" method="post" th:object="${todo}" th:action="@{/todo/add}">
 
-                <input type="text" name="text" placeholder="Wpisz tre?? zadania">
+                <input type="text" name="text" placeholder="Wpisz treść zadania">
 
                 <div th:if="${#fields.hasErrors('text')}">
                     Tre?? zadania musi mie? od 4 do 255 znaków

@@ -1,5 +1,4 @@
-package pl.sda.todoapplication.mapper;
-
+package pl.sda.todoapp.mapper;
 
 import pl.sda.todoapp.entity.TodoEntity;
 import pl.sda.todoapp.model.TodoDto;

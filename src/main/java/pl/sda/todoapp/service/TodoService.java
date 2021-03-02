@@ -6,7 +6,7 @@ import pl.sda.todoapp.entity.TodoEntity;
 import pl.sda.todoapp.model.CreateTodoDto;
 import pl.sda.todoapp.model.TodoDto;
 import pl.sda.todoapp.repository.TodoRepository;
-import pl.sda.todoapplication.mapper.TodoMapper;
+import pl.sda.todoapp.mapper.TodoMapper;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.Date;
@@ -32,8 +32,9 @@ public class TodoService {
 
         Optional<TodoEntity> entity = todoRepository.findById(id);
         if (entity.isPresent()) {
-            return TodoMapper.mapeEntityToDto(entity.)
+            return TodoMapper.mapeEntityToDto(entity.get());
         }
+        throw new EntityNotFoundException();
     }
 
 
